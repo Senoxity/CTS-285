@@ -1,10 +1,83 @@
-# Dataman Requirements Register
-This document contains known functional and non-functional requirements for a modern rehash of the Dataman calculator.
-The different statements regarding the function or design of the modern form of Dataman are separated into their own sections for readability.
+# DataMan Requirements Register
+> Replace all bracketed prompts with your own project evidence and requirements. Delete the prompts before submitting.
+## Project Context
+The DataMan Project is intended to bring a modern spin on the legacy calculator by the same name. The project seeks to rebuild the different functions of the original DataMan calculator in order to make practicing simple math concepts more fun and engaging for students. The program is meant to be used by both students and teachers, both for practicing basic math concepts, and tracking the user's progress as they do so.
 
-### Functional Requirements
-- The system must show the learner how many attempts remain on the current problem before it reveals the correct answer.
-### Non-functional Requirements
-- Feedback after an incorrect answer must be available through keyboard navigation and must not rely on color alone.
-### Assumptions and Proposed Solutions
-- 
+## Evidence Notes
+- **E-01 — Source:** M2 Eliciation Decision Record  
+  **Evidence:**  Stakeholders say modern means the experience should work reliably in a browser, be understandable without a printed manual, and avoid making the learner navigate unnecessary screens. They do not specify a visual style or framework.
+
+- **E-02 — Source:** M2 Eliciation Decision Record  
+  **Evidence:** Stakeholders identify immediate answer feedback, repeated practice after an incorrect response, and a clear way for learners to see progress as central to the original experience.
+
+- **E-03 — Source:** M2 Eliciation Decision Record  
+  **Evidence:** Adults want to understand what the learner practiced and whether progress is occurring, but stakeholders have not yet agreed on a detailed reporting dashboard.
+
+- **E-04 — Source:** Original DataMan Manual 
+  **Evidence:** The program is intended to focus on practicing basic math concepts; it was not meant for testing purposes.
+  
+[Add additional evidence notes if needed.]
+
+## Functional Requirements
+Write at least four functional requirements. Each requirement should describe a capability or behavior the system must provide.
+### FR-01
+**Requirement:** The system must [capability/behavior].  
+**Source/Rationale:** [Evidence or stakeholder need that supports this requirement.]
+
+### FR-02
+**Requirement:** The system must [capability/behavior].  
+**Source/Rationale:** [Evidence or stakeholder need that supports this requirement.]
+
+### FR-03
+**Requirement:** The system must [capability/behavior].  
+**Source/Rationale:** [Evidence or stakeholder need that supports this requirement.]
+
+### FR-04
+**Requirement:** The system must [capability/behavior].  
+**Source/Rationale:** [Evidence or stakeholder need that supports this requirement.]
+
+[Add additional functional requirements if needed.]
+
+## Non-Functional Requirements
+Write at least three non-functional requirements. Each requirement should describe a measurable quality, constraint, or condition the system must satisfy.
+
+### NFR-01
+**Requirement:** The system must [measurable quality/constraint/condition].  
+**Source/Rationale:** [Evidence or project constraint that supports this requirement.]
+
+### NFR-02
+**Requirement:** The system must [measurable quality/constraint/condition].  
+**Source/Rationale:** [Evidence or project constraint that supports this requirement.]
+
+### NFR-03
+**Requirement:** The system must [measurable quality/constraint/condition].  
+**Source/Rationale:** [Evidence or project constraint that supports this requirement.]
+
+[Add additional non-functional requirements if needed.]
+
+## Open Questions / Assumptions
+Do not turn an unsupported idea into a confirmed requirement. Record unresolved items here until evidence supports a decision.
+
+- **Q-01:** [What still needs to be clarified or confirmed?]
+- **Q-02:** [What still needs to be clarified or confirmed?]
+
+[Add or remove items as appropriate.]
+## Final Quality Check
+
+Before submitting, confirm that each requirement is:
+
+- [ ] Clear enough for another team member to interpret consistently.
+- [ ] Supported by evidence, a stakeholder need, or a confirmed project constraint.
+- [ ] Testable or verifiable later.
+- [ ] Solution-neutral enough for this stage of the project.
+- [ ] Focused on one main capability or quality.
+- [ ] Classified correctly as functional or non-functional.
+
+Also confirm:
+
+- [ ] At least four functional requirements are included.
+- [ ] At least three non-functional requirements are included.
+- [ ] Every confirmed requirement has a source/rationale.
+- [ ] Open questions and assumptions are separated from confirmed requirements.
+- [ ] The simulation decision record is saved at `docs/decisions/m2-elicitation-decision-record.md`.
+- [ ] This file is saved as `docs/requirements.md`, committed, and synced to GitHub.
