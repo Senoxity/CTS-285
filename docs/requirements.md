@@ -21,22 +21,24 @@ The DataMan Project is intended to bring a modern spin on the legacy calculator 
 ## Functional Requirements
 Write at least four functional requirements. Each requirement should describe a capability or behavior the system must provide.
 ### FR-01
-**Requirement:** The system must [capability/behavior].  
-**Source/Rationale:** [Evidence or stakeholder need that supports this requirement.]
+**Requirement:** The system must preserve a learner's saved practice progress between authenticated sessions.  
+**Source/Rationale:** Stakeholder need for a progress-saving system is evident throughout multiple sources. An exact record of this need is, “Students keep losing their practice progress when they leave and return later.”
 
 ### FR-02
-**Requirement:** The system must [capability/behavior].  
-**Source/Rationale:** [Evidence or stakeholder need that supports this requirement.]
+**Requirement:** The system must be fully compatible with multiple types of viewports for ease of use.   
+**Source/Rationale:** Pre-determined stakeholder need for the program to be easily accessible was defined in E-01. 
 
 ### FR-03
-**Requirement:** The system must [capability/behavior].  
-**Source/Rationale:** [Evidence or stakeholder need that supports this requirement.]
+**Requirement:** The system must give immediate feedback when the user enters a math problem, solution, or number guess.
+**Source/Rationale:** Requirement describes the original behavior of the Answer Checker, Memory Bank, and Number Guesser.
 
 ### FR-04
-**Requirement:** The system must [capability/behavior].  
-**Source/Rationale:** [Evidence or stakeholder need that supports this requirement.]
+**Requirement:** The system must display the learner's progress in an easy-to-read format that is easily accessible by Parents or Instructors.  
+**Source/Rationale:** Learner progress tracking was an established Stakeholder need in E-03.
 
-[Add additional functional requirements if needed.]
+### FR-05
+**Requirement:** The system must clearly display the number of attempts the user has made on a problem, as well as how many attempts remain.
+**Source/Rationale:** Stakeholder and instructor concern over learners giving up or simply guessing their way through problems has made this requirement tantamount to ensuring learners stay engaged and focused.
 
 ## Non-Functional Requirements
 Write at least three non-functional requirements. Each requirement should describe a measurable quality, constraint, or condition the system must satisfy.
