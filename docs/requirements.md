@@ -24,7 +24,7 @@ Write at least four functional requirements. Each requirement should describe a 
 **Source/Rationale:** Stakeholder need for a progress-saving system is evident throughout multiple sources. An exact record of this need is, “Students keep losing their practice progress when they leave and return later.”
 
 ### FR-02
-**Requirement:** The system must be fully compatible with multiple types of viewports for ease of use.   
+**Requirement:** The system must be fully compatible with multiple types of devices for ease of use.   
 **Source/Rationale:** Pre-determined stakeholder need for the program to be easily accessible was defined in E-01. 
 
 ### FR-03
@@ -32,7 +32,7 @@ Write at least four functional requirements. Each requirement should describe a 
 **Source/Rationale:** Requirement describes the original behavior of the Answer Checker, Memory Bank, and Number Guesser.
 
 ### FR-04
-**Requirement:** The system must display the learner's progress in an easy-to-read format that is easily accessible by Parents or Instructors.  
+**Requirement:** The system must display the learner's progress in a format that is easily accessible by Parents or Instructors.  
 **Source/Rationale:** Learner progress tracking was an established Stakeholder need in E-03.
 
 ### FR-05
@@ -67,18 +67,18 @@ Do not turn an unsupported idea into a confirmed requirement. Record unresolved 
 
 Before submitting, confirm that each requirement is:
 
-- [ ] Clear enough for another team member to interpret consistently.
-- [ ] Supported by evidence, a stakeholder need, or a confirmed project constraint.
-- [ ] Testable or verifiable later.
-- [ ] Solution-neutral enough for this stage of the project.
-- [ ] Focused on one main capability or quality.
-- [ ] Classified correctly as functional or non-functional.
+- [x] Clear enough for another team member to interpret consistently.
+- [x] Supported by evidence, a stakeholder need, or a confirmed project constraint.
+- [x] Testable or verifiable later.
+- [x] Solution-neutral enough for this stage of the project.
+- [x] Focused on one main capability or quality.
+- [x] Classified correctly as functional or non-functional.
 
 Also confirm:
 
-- [ ] At least four functional requirements are included.
-- [ ] At least three non-functional requirements are included.
-- [ ] Every confirmed requirement has a source/rationale.
-- [ ] Open questions and assumptions are separated from confirmed requirements.
-- [ ] The simulation decision record is saved at `docs/decisions/m2-elicitation-decision-record.md`.
-- [ ] This file is saved as `docs/requirements.md`, committed, and synced to GitHub.
+- [x] At least four functional requirements are included.
+- [x] At least three non-functional requirements are included.
+- [x] Every confirmed requirement has a source/rationale.
+- [x] Open questions and assumptions are separated from confirmed requirements.
+- [x] The simulation decision record is saved at `docs/decisions/m2-elicitation-decision-record.md`.
+- [x] This file is saved as `docs/requirements.md`, committed, and synced to GitHub.
