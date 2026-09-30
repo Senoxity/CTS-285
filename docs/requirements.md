@@ -1,5 +1,5 @@
 # DataMan Requirements Register
-> Replace all bracketed prompts with your own project evidence and requirements. Delete the prompts before submitting.
+
 ## Project Context
 The DataMan Project is intended to bring a modern spin on the legacy calculator by the same name. The project seeks to rebuild the different functions of the original DataMan calculator in order to make practicing simple math concepts more fun and engaging for students. The program is meant to be used by both students and teachers, both for practicing basic math concepts, and tracking the user's progress as they do so.
 
@@ -16,7 +16,6 @@ The DataMan Project is intended to bring a modern spin on the legacy calculator 
 - **E-04 — Source:** Original DataMan Manual
   **Evidence:** The program is intended to focus on practicing basic math concepts; it was not meant for testing purposes.
   
-[Add additional evidence notes if needed.]
 
 ## Functional Requirements
 Write at least four functional requirements. Each requirement should describe a capability or behavior the system must provide.
@@ -55,15 +54,15 @@ Write at least three non-functional requirements. Each requirement should descri
 **Requirement:** The system must maintain an intuitive and easy-to-use format for both learners and guardians.
 **Source/Rationale:** M2 Elicitation Record cites stakeholder need for a "modern" version of DataMan. Stakeholder's definition of "modern" in this context describes the need for the program to be "understandable without a manual". 
 
-[Add additional non-functional requirements if needed.]
 
 ## Open Questions / Assumptions
 Do not turn an unsupported idea into a confirmed requirement. Record unresolved items here until evidence supports a decision.
 
-- **Q-01:** [What still needs to be clarified or confirmed?]
-- **Q-02:** [What still needs to be clarified or confirmed?]
+- **Q-01:** Stakeholder definition of what "modern" means in the context of DataMan and the DataMan project still requires clarification.
+- **Q-02:** Compatibility of the program between operating systems (i.e. Windows, Chrome OS, Linux, etc.) is not directly listed as a requirement, but it is implied.
+- **Q-03:** Preferred database technology for saving user progress was never outlined by stakeholders. "DataMan Requirement Repair Lab" implies the usage of SQLite, but this is inconclusive.
 
-[Add or remove items as appropriate.]
+
 ## Final Quality Check
 
 Before submitting, confirm that each requirement is:
