@@ -44,12 +44,12 @@ Write at least four functional requirements. Each requirement should describe a 
 Write at least three non-functional requirements. Each requirement should describe a measurable quality, constraint, or condition the system must satisfy.
 
 ### NFR-01
-**Requirement:** The system must [measurable quality/constraint/condition].  
-**Source/Rationale:** [Evidence or project constraint that supports this requirement.]
+**Requirement:** The system must be available to all users from 7:00AM to 7:00PM, Monday through Friday, except for maintainence hours/days.  
+**Source/Rationale:** The system must be available during these times in order to be utilized by learners during school hours.
 
 ### NFR-02
-**Requirement:** The system must [measurable quality/constraint/condition].  
-**Source/Rationale:** [Evidence or project constraint that supports this requirement.]
+**Requirement:** The system must maintain a visual style similar in theme to the original DataMan calculator from 1977.
+**Source/Rationale:** Brand identity is important to the project if its purpose is to revive an existing program.
 
 ### NFR-03
 **Requirement:** The system must [measurable quality/constraint/condition].  
