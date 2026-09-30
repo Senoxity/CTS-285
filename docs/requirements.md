@@ -52,8 +52,8 @@ Write at least three non-functional requirements. Each requirement should descri
 **Source/Rationale:** Brand identity is important to the project if its purpose is to revive an existing program.
 
 ### NFR-03
-**Requirement:** The system must [measurable quality/constraint/condition].  
-**Source/Rationale:** [Evidence or project constraint that supports this requirement.]
+**Requirement:** The system must maintain an intuitive and easy-to-use format for both learners and guardians.
+**Source/Rationale:** M2 Elicitation Record cites stakeholder need for a modernized framework for the program to operate on. 
 
 [Add additional non-functional requirements if needed.]
 
