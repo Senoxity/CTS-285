@@ -53,7 +53,7 @@ Write at least three non-functional requirements. Each requirement should descri
 
 ### NFR-03
 **Requirement:** The system must maintain an intuitive and easy-to-use format for both learners and guardians.
-**Source/Rationale:** M2 Elicitation Record cites stakeholder need for a "modern" version of DataMan. Stakeholder's definition of "modern" in this context describes 
+**Source/Rationale:** M2 Elicitation Record cites stakeholder need for a "modern" version of DataMan. Stakeholder's definition of "modern" in this context describes the need for the program to be "understandable without a manual". 
 
 [Add additional non-functional requirements if needed.]
 
