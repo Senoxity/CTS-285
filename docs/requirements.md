@@ -16,16 +16,16 @@ The DataMan Project is intended to bring a modern spin on the legacy calculator 
 - **E-04 — Source:** Original DataMan Manual  
   **Evidence:** The program is intended to focus on practicing basic math concepts; it was not meant for testing purposes.
 
-- **E-05 — Source:** M2.3 DataMan Elicitation Case
+- **E-05 — Source:** M2.3 DataMan Elicitation Case  
   **Evidence:** Instructors and Stakeholder cite concerns over user engagement, saying that learners are prone to guessing or giving up after repeated attempts on the same problem.
 
-- **E-06 — Source:** M2 Elicitation Decision Record
+- **E-06 — Source:** M2 Elicitation Decision Record  
   **Evidence:** A complication arose in which Stakeholders raised concern over students being logged out prematurely when using the program on a mobile device.
 
-- **E-07 — Source:** M2 Simulation
+- **E-07 — Source:** M2 Simulation  
   **Evidence:** Teachers report that students may pause practice and return later. They want a learner’s saved practice state to remain available after leaving and returning to the application.
 
-- **E-08 — Source:** customer_vn.html (AKA Elicitation VN Scene)
+- **E-08 — Source:** customer_vn.html (AKA Elicitation VN Scene)  
   **Evidence:** Stakeholders report that DataMan would be used in a classroom setting, with other learners present and actively using the program as well. This information is provided by the learner present in the scene.
   
 
