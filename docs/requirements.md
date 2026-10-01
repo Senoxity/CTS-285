@@ -13,7 +13,7 @@ The DataMan Project is intended to bring a modern spin on the legacy calculator 
 - **E-03 — Source:** M2 Eliciation Decision Record  
   **Evidence:** Adults want to understand what the learner practiced and whether progress is occurring, but stakeholders have not yet agreed on a detailed reporting dashboard.
 
-- **E-04 — Source:** Original DataMan Manual
+- **E-04 — Source:** Original DataMan Manual  
   **Evidence:** The program is intended to focus on practicing basic math concepts; it was not meant for testing purposes.
 
 - **E-05 — Source:** M2.3 DataMan Elicitation Case
