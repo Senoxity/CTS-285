@@ -15,24 +15,36 @@ The DataMan Project is intended to bring a modern spin on the legacy calculator 
 
 - **E-04 — Source:** Original DataMan Manual
   **Evidence:** The program is intended to focus on practicing basic math concepts; it was not meant for testing purposes.
+
+- **E-05 — Source:** M2.3 DataMan Elicitation Case
+  **Evidence:** Instructors and Stakeholder cite concerns over user engagement, saying that learners are prone to guessing or giving up after repeated attempts on the same problem.
+
+- **E-06 — Source:** M2 Elicitation Decision Record
+  **Evidence:** A complication arose in which Stakeholders raised concern over students being logged out prematurely when using the program on a mobile device.
+
+- **E-07 — Source:** M2 Simulation
+  **Evidence:** Teachers report that students may pause practice and return later. They want a learner’s saved practice state to remain available after leaving and returning to the application.
+
+- **E-08 — Source:** customer_vn.html (AKA Elicitation VN Scene)
+  **Evidence:** Stakeholders report that DataMan would be used in a classroom setting, with other learners present and actively using the program as well. This information is provided by the learner present in the scene.
   
 
 ## Functional Requirements
-Write at least four functional requirements. Each requirement should describe a capability or behavior the system must provide.
+
 ### FR-01
 **Requirement:** The system must preserve a learner's saved practice progress between authenticated sessions.  
 **Source/Rationale:** Stakeholder need for a progress-saving system is evident throughout multiple sources. An exact record of this need is, “Students keep losing their practice progress when they leave and return later.”
 
 ### FR-02
-**Requirement:** The system must be fully compatible with multiple types of devices for ease of use.   
-**Source/Rationale:** Pre-determined stakeholder need for the program to be easily accessible was defined in E-01. 
+**Requirement:** The system must give users the option to pause the program mid-practice, and return to the practice session at the exact point they paused at.
+**Source/Rationale:** Pausing the program and returning in the same state was an established stakeholder need in E-07.
 
 ### FR-03
 **Requirement:** The system must give immediate feedback when the user enters a math problem, solution, or number guess.
 **Source/Rationale:** Requirement describes the original behavior of the Answer Checker, Memory Bank, and Number Guesser.
 
 ### FR-04
-**Requirement:** The system must display the learner's progress in a format that is easily accessible by Parents or Instructors.  
+**Requirement:** The system must display the learner's progress in a format that can be accessed by Parents or Instructors.  
 **Source/Rationale:** Learner progress tracking was an established Stakeholder need in E-03.
 
 ### FR-05
@@ -43,42 +55,20 @@ Write at least four functional requirements. Each requirement should describe a 
 Write at least three non-functional requirements. Each requirement should describe a measurable quality, constraint, or condition the system must satisfy.
 
 ### NFR-01
-**Requirement:** The system must be available to all users from 7:00AM to 7:00PM, Monday through Friday, except for maintainence hours/days.  
-**Source/Rationale:** The system must be available during these times in order to be utilized by learners during school hours.
+**Requirement:** The system must remain functional on multiple types of devices.
+**Source/Rationale:** This requirement is meant to rectify the complication that arose in the Decision Record, as outlined in E-06.
 
 ### NFR-02
-**Requirement:** The system must maintain a visual style similar in theme to the original DataMan calculator from 1977.
-**Source/Rationale:** Brand identity is important to the project if its purpose is to revive an existing program.
+**Requirement:** The system must support at least 100 simultaneous users without noticeable performance degradation.
+**Source/Rationale:** M2 Simulation (E-08) describes the usage of the DataMan program in a classroom setting, where excessive internet traffic is expected. The program must be functional under these conditions.
 
 ### NFR-03
-**Requirement:** The system must maintain an intuitive and easy-to-use format for both learners and guardians.
+**Requirement:** The system must maintain a clearly labeled and consistent interface for both learners and guardians to access core functions, and review progress.
 **Source/Rationale:** M2 Elicitation Record cites stakeholder need for a "modern" version of DataMan. Stakeholder's definition of "modern" in this context describes the need for the program to be "understandable without a manual". 
 
 
 ## Open Questions / Assumptions
-Do not turn an unsupported idea into a confirmed requirement. Record unresolved items here until evidence supports a decision.
 
-- **Q-01:** Stakeholder definition of what "modern" means in the context of DataMan and the DataMan project still requires clarification.
+- **Q-01:** Stakeholders have not identified whether or not other features of the original calculator (i.e. Electro Flash, Wipe Out, Force Out, etc.) are also meant to be preserved.
 - **Q-02:** Compatibility of the program between operating systems (i.e. Windows, Chrome OS, Linux, etc.) is not directly listed as a requirement, but it is implied.
 - **Q-03:** Preferred database technology for saving user progress was never outlined by stakeholders. "DataMan Requirement Repair Lab" implies the usage of SQLite, but this is inconclusive.
-
-
-## Final Quality Check
-
-Before submitting, confirm that each requirement is:
-
-- [x] Clear enough for another team member to interpret consistently.
-- [x] Supported by evidence, a stakeholder need, or a confirmed project constraint.
-- [x] Testable or verifiable later.
-- [x] Solution-neutral enough for this stage of the project.
-- [x] Focused on one main capability or quality.
-- [x] Classified correctly as functional or non-functional.
-
-Also confirm:
-
-- [x] At least four functional requirements are included.
-- [x] At least three non-functional requirements are included.
-- [x] Every confirmed requirement has a source/rationale.
-- [x] Open questions and assumptions are separated from confirmed requirements.
-- [x] The simulation decision record is saved at `docs/decisions/m2-elicitation-decision-record.md`.
-- [x] This file is saved as `docs/requirements.md`, committed, and synced to GitHub.
