@@ -4,9 +4,9 @@
 | ID | Backlog Item | Round 1 | Revised | Value | Effort | Dependency | Risk |
 |---|---|---|---|---|---|---|---|
 | S1 | Immediate answer feedback | Move Forward | Move Forward | High | Small | None | Low |
-| S2 | Preserve learner progress between sessions | Refine | Refine | High | Large | Identity/session approach | Medium |
+| S2 | Preserve learner progress between sessions | Refine | Defer | High | Large | Identity/session approach | Medium |
 | S3 | Decorative theme selector | Defer | Defer | Low | Small | None | Low |
-| S4 | Parent/teacher activity summary | Refine | Refine | Medium | Medium | Activity data | Medium |
+| S4 | Parent/teacher activity summary | Refine | Defer | Medium | Medium | Activity data | Medium |
 | S5 | Retry after an incorrect response | Move Forward | Move Forward | High | Small | Answer-checking flow | Low |
 | S6 | Advanced analytics dashboard | Refine | Refine | Medium | Large | Reporting model | High |
 
