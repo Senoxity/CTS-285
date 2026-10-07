@@ -16,10 +16,10 @@ The DataMan Project is intended to bring a modern spin on the legacy calculator 
 - **E-04 — Source:** Original DataMan Manual  
   **Evidence:** The program is intended to focus on practicing basic math concepts; it was not meant for testing purposes.
 
-- **E-05 — Source:** M2.3 DataMan Elicitation Case  
+- **E-05 — Source:** M2.3 DataMan Eliciation Case  
   **Evidence:** Instructors and Stakeholder cite concerns over user engagement, saying that learners are prone to guessing or giving up after repeated attempts on the same problem.
 
-- **E-06 — Source:** M2 Elicitation Decision Record  
+- **E-06 — Source:** M2 Eliciation Decision Record  
   **Evidence:** A complication arose in which Stakeholders raised concern over students being logged out prematurely when using the program on a mobile device.
 
 - **E-07 — Source:** M2 Simulation  
@@ -63,7 +63,7 @@ The DataMan Project is intended to bring a modern spin on the legacy calculator 
 
 ### NFR-03
 **Requirement:** The system must maintain a clearly labeled and consistent interface for both learners and guardians to access core functions, and review progress.  
-**Source/Rationale:** M2 Elicitation Record cites stakeholder need for a "modern" version of DataMan. Stakeholder's definition of "modern" in this context describes the need for the program to be "understandable without a manual". 
+**Source/Rationale:** M2 Eliciation Record cites stakeholder need for a "modern" version of DataMan. Stakeholder's definition of "modern" in this context describes the need for the program to be "understandable without a manual". 
 
 
 ## Open Questions / Assumptions
