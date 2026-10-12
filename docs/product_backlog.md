@@ -34,22 +34,22 @@ This backlog uses these files from my repository:
 - When the user selects the pause option,
 - Then the session stops, and when the user resumes, they return to the exact question and state where they paused.
 
-**Relative Effort:** Medium, relies on the identity/session approach, capturing and restoring the exact question state, plus restore-after-exit needing identity.  
+**Relative Effort:** Medium, must capture and restore the exact question state; restoring after exit also needs the identity/session approach.  
 **Dependency / Constraint:** Identity/Session approach  
 **Priority:** 2  
 **Readiness:** Refine  
-**Priority Rationale:** Since this feature unlocks development for US-02, operates on a low risk level, and has explicit stakeholder need outlined in E-07, the feature holds a high value, but the feature can't be fully completed until this identity/session approach is resolved. US-03 maintains it's position over US-05 in the priority list due to the aforementioned stakeholder need, as well as unlocking development on US-02.
+**Priority Rationale:** Since this feature unlocks development for US-02, operates on a medium risk level, and has explicit stakeholder need outlined in E-07, the feature holds a high value, but the feature can't be fully completed until this identity/session approach is resolved. US-03 maintains it's position over US-05 in the priority list due to the aforementioned stakeholder need, as well as unlocking development on US-02.
 
 ---
 ### US-05 — User Attempts Monitoring
 **Requirement ID:** [FR-05]  
-**User Story:** As a learner, I want the ability to see how many attempts I've made so that I stay focused on each problem instead of guessing or giving up.  
+**User Story:** As a learner, I want the ability to see how many attempts I’ve used and how many remain so that I stay focused on each problem instead of guessing or giving up.  
 **Acceptance Criteria:**  
 - Given that a learner is in a practice session,
-- When a learner is provided a practice problem,
-- Then the system displays how many attempts the user has made, and how many remain visible on the problem screen without navigating elsewhere.
+- When the problem is presented and after each incorrect attempt,
+- Then the system displays how many attempts used, and how many remain, visible on the problem screen without navigating elsewhere.
 
-**Relative Effort:** Small, relies only on US-01. Like US-01, it is a basic, main function of the program.
+**Relative Effort:** Small, counts attempts and displays two numbers, building on US-01’s correct/incorrect result.  
 **Dependency / Constraint:** US-01  
 **Priority:** 3  
 **Readiness:** Move Forward  
@@ -60,9 +60,9 @@ This backlog uses these files from my repository:
 **Requirement ID:** [FR-01]  
 **User Story:** As a learner, I want my progress to be saved between sessions so that I don’t lose my practice progress when I leave and come back later.  
 **Acceptance Criteria:**  
-- Given that the user is in an authenticated session,
-- When the user leaves or exits the session,
-- Then the user's current practice progress is saved.
+- Given that the user has exited an authenticated session,
+- When the user returns in a new authenticated session,
+- Then the user's last saved practice session progress is available.
 
 **Relative Effort:** Large, relies on an identity/session approach that would require a large amount of additional work/refinement.  
 **Dependency / Constraint:** US-03, Q-03, NFR-01, Identity/Session approach  
@@ -77,7 +77,7 @@ This backlog uses these files from my repository:
 **Acceptance Criteria:**  
 - Given that a learner has completed a practice session,
 - When a parent/teacher selects the progress option,
-- Then a summary of what the learner has practiced, and whether progress has occurred is made available from a clearly labeled location.
+- Then the system displays a summary of what the learner practiced and whether progress is occurring, reachable from a clearly labeled location.
 
 **Relative Effort:** Medium, requires maintenance of the learner's activity data. This data would then be displayed to the parent/teacher.  
 **Dependency / Constraint:** Q-03, E-03, Identity/Session approach, Activity data.  
@@ -89,7 +89,7 @@ This backlog uses these files from my repository:
 - **[Q-01]:** No story currently waits on this question, since it describes adding whole new features to the program, rather than describing core functionality or basic features.
 - **[Q-02]:** The behavior of the program across operating systems is technically a constraint on every story, but Q-02 does not block any of the stories from continuing development as it stands currently.  
 - **[Q-03]:** US-04 and US-02 rely on this question being answered, since the saved progress functionality, as well as the progress summary feature require collection of user data. Knowing which database technology to use would allow developers to begin working on these features.
-- **[Identity/Session Approach]:** Originating from the Backlog Triage Decision Record, this is being listed as an open question due to its position as a dependency on many of the stories listed in this document, but it's undefined nature as outlined in the triage record requires refinement. The Identity/Session Approach also affects E-06 and NFR-01 from the Requirements Register.
+- **[Identity/Session Approach]:** Originating from the Backlog Triage Decision Record, this is being listed as an open question due to its position as a dependency on US-02, US-03, and US-04 listed in this document, but it's undefined nature as outlined in the triage record requires refinement. The Identity/Session Approach also affects E-06 and NFR-01 from the Requirements Register.
 ## Revisions After Triage and Release Planning
 The Backlog Triage Decision Record affected the decision-making process for some of the requirements listed above, since that record detailed a lot of functions that were laid out in the Requirements Register; a document that I used as the basis for the Product Backlog. The specific changes the Backlog Triage Decision Record made to this document are listed below:
 - US-02 deferred per triage (identity/session not ready).
@@ -98,16 +98,16 @@ The Backlog Triage Decision Record affected the decision-making process for some
 - S3 and S6 excluded.
 
 The Product Owner Decision Record also played a role in shaping how decisions were made about the user stories, due to the "checklist" that the document provided (the section under "Transfer to DataMan" in that record). Specific examples include:
-- High value but not ready: US-02, US-03
+- High Value but Not Ready: US-02, US-03
 - Depends on Unresolved Work: US-02, US-03, US-04
 - Disproportionate Effort: US-02
-- Unlocks other work: US-03
+- Unlocks Other Work: US-03
 
 ## Additional Notes
 - Triage Numbers Resolution:
-- - S1 = US-01
-- - S2 = US-02
-- - S4 = US-04
+  - S1 = US-01
+  - S2 = US-02
+  - S4 = US-04
 - US-03 and US-05 have no triage counterpart.
 - While a specific outline of capacity was not laid out for the DataMan Project, as it stands currently the only requirements listed in the Product Backlog that could form the first usable release would be US-01 and US-05, due to their lack of dependencies, and high-value nature.
 - Items S3 and S6 from the Backlog Triage Decision Record were excluded for the purposes of this document. Item S3 was deferred because of it's low value to the project, and E-01 stating that stakeholders gave no visual style for the DataMan Project. Item S6 was excluded due to outstanding disagreements between stakeholders about how a reporting dashboard would look/function. This disagreement is outlined in E-03.
