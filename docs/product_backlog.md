@@ -19,28 +19,13 @@ appear in this same order.
 **Acceptance Criteria:**
 - Given that the user is answering a problem,
 - When the user enters an input into the program (i.e. problem, solution, number guess),
-- Then the system indicates whether the answer is correct or incorrect.
+- Then the system indicates correct or incorrect immediately, without further action from the user.
 
-**Relative Effort:** Small, describes a basic function of the program that would not require much substantial effort.  
+**Relative Effort:** Small, describes a basic function of the program that would only require input-checking and a displayed result.  
 **Dependency / Constraint:** None  
 **Priority:** 1  
 **Readiness:** Move Forward  
-**Priority Rationale:** The requirement's status as a high-value, low-effort core functionality of the system makes it a top priority. Stakeholders also require this feature for the first public release, and afford the feature very high value, as outlined in E-02.
-
----
-### US-02 — Saved Progress Retention
-**Requirement ID:** [FR-01]  
-**User Story:** As a learner, I want my progress to be saved between sessions so that I don’t lose my practice progress when I leave and come back later.  
-**Acceptance Criteria:**  
-- Given that the user is in an authenticated session,
-- When the user pauses or exits the session,
-- Then the user's progress is saved, and the user's last saved practice state is restored when they return.
-
-**Relative Effort:** Large, relies on an identity/session approach that would require a large amount of additional work/refinement.  
-**Dependency / Constraint:** US-03, Q-03, NFR-01, Identity/Session approach  
-**Priority:** 4  
-**Readiness:** Defer  
-**Priority Rationale:** Implementation of this feature requires a very high amount of effort. It's high value for stakeholders and US-03's position as a dependency allows it to hold Priority 4, but the feature cannot continue development until the Identity/Session approach is resolved.
+**Priority Rationale:** The requirement's status as a high-value, low-effort, low risk core functionality of the system makes it a top priority. Stakeholders also require this feature for the first public release, and afford the feature very high value, as outlined in the Backlog Triage Decision Record.
 
 ---
 ### US-03 — Mid-Practice Pause Functionality
@@ -51,44 +36,59 @@ appear in this same order.
 - When the user selects the pause option,
 - Then the session stops, and when the user resumes, they return to the exact question and state where they paused.
 
-**Relative Effort:** Medium, relies on the identity/session approach, and implementation may cause issues to arise  
+**Relative Effort:** Medium, relies on the identity/session approach, capturing and restoring the exact question state, plus restore-after-exit needing identity.  
 **Dependency / Constraint:** Identity/Session approach  
 **Priority:** 2  
 **Readiness:** Refine  
-**Priority Rationale:** Since this feature unlocks development for US-02, as well as having explicit stakeholder need outlined in E-07, the feature holds a high value, but the feature can't be fully completed until this identity/session approach is resolved.
+**Priority Rationale:** Since this feature unlocks development for US-02, operates on a low risk level, and has explicit stakeholder need outlined in E-07, the feature holds a high value, but the feature can't be fully completed until this identity/session approach is resolved. US-03 maintains it's position over US-05 in the priority list due to the aforementioned stakeholder need, as well as unlocking development on US-02.
+
+---
+### US-05 — User Attempts Monitoring
+**Requirement ID:** [FR-05]  
+**User Story:** As a learner, I want the ability to see how many attempts I've made so that I stay focused on each problem instead of guessing or giving up.  
+**Acceptance Criteria:**  
+- Given that a learner is in a practice session,
+- When a learner is provided a practice problem,
+- Then the system displays how many attempts the user has made, and how many remain visible on the problem screen without navigating elsewhere.
+
+**Relative Effort:** Small, relies only on US-01. Like US-01, it is a basic, main function of the program.
+**Dependency / Constraint:** US-01  
+**Priority:** 3  
+**Readiness:** Move Forward  
+**Priority Rationale:** The feature's relatively low risk and low effort required to implement contrasts well with its high value among stakeholders, particularly instructors.
+
+---
+### US-02 — Saved Progress Retention
+**Requirement ID:** [FR-01]  
+**User Story:** As a learner, I want my progress to be saved between sessions so that I don’t lose my practice progress when I leave and come back later.  
+**Acceptance Criteria:**  
+- Given that the user is in an authenticated session,
+- When the user leaves or exits the session,
+- Then the user's current practice progress is saved.
+
+**Relative Effort:** Large, relies on an identity/session approach that would require a large amount of additional work/refinement.  
+**Dependency / Constraint:** US-03, Q-03, NFR-01, Identity/Session approach  
+**Priority:** 4  
+**Readiness:** Defer  
+**Priority Rationale:** Implementation of this feature requires a very high amount of effort. It's high value for stakeholders allows it to hold Priority 4, but the feature cannot continue development until the Identity/Session approach is resolved, and until US-03 is completed. Risk level is Medium, since the dependence on other requirements makes rework potential noticeable. It holds it's position over US-04 despite being deferred due to it's inherent value to the project, once it's dependencies have been satisfied.
 
 ---
 ### US-04 — Parent/Teacher Progress Summary
 **Requirement ID:** [FR-04, NFR-03]  
-**User Story:** As a parent or teacher, I want a summary of the learner's progress so that I can see what they practiced, and whether practice is occurring.  
+**User Story:** As a parent or teacher, I want a summary of the learner's progress so that I can see what they practiced, and whether progress is occurring.  
 **Acceptance Criteria:**  
 - Given that a learner has completed a practice session,
-- When a teacher/guardian accesses the learner's account,
-- Then a summary of the learner's practice session is displayed.
+- When a parent/teacher selects the progress option,
+- Then a summary of what the learner has practiced, and whether progress has occurred is made available from a clearly labeled location.
 
-**Relative Effort:** Medium, requires maintenance of the learner's activity data. This data would then be displayed to the parent/guardian.  
+**Relative Effort:** Medium, requires maintenance of the learner's activity data. This data would then be displayed to the parent/teacher.  
 **Dependency / Constraint:** Q-03, E-03, Identity/Session approach, Activity data.  
 **Priority:** 5  
 **Readiness:** Refine  
 **Priority Rationale:** The amount of effort relative to what is being provided is unbalanced, due to it's position as being medium-value, but also medium-risk because of the feature's extra unresolved scope (i.e. usage of activity data, reliance on Q-03, and undefined reporting structure as outlined in E-03). This allows it to sit below US-02, despite being closer to completion.
 
----
-### US-05 — User Attempts Monitoring
-**Requirement ID:** [FR-05]  
-**User Story:** As a learner, I want the ability to see how many attempts I've made, and how many attempts remain so that I know how many more attempts I can make.  
-**Acceptance Criteria:**  
-- Given that a learner is completing a practice problem,
-- When a learner answers incorrectly,
-- Then the system displays how many attempts the user has made, and how many more attempts remain on the problem.
-
-**Relative Effort:** Small, has no dependencies and works in tandem with core features.  
-**Dependency / Constraint:** None  
-**Priority:** 3  
-**Readiness:** Move Forward  
-**Priority Rationale:** The feature's relatively low effort required to implement contrasts well with its high value among shareholders, particularly instructors.
-
 ## Open Questions Carried Forward
-- **[Q-01]:** No story currently waits on this question, since it describes adding whole new features to the program, rather than describing core functionality or basic features. In other words, it currently lies outside the project scope.  
+- **[Q-01]:** No story currently waits on this question, since it describes adding whole new features to the program, rather than describing core functionality or basic features.
 - **[Q-02]:** The behavior of the program across devices and browsers is technically a constraint on every story, but Q-02 does not block any of the stories from continuing development as it stands currently.  
 - **[Q-03]:** US-04 and US-02 rely on this question being answered, since the saved progress functionality, as well as the progress summary feature require collection of user data. Knowing which database technology to use would allow developers to begin working on these features.
 - **[Identity/Session Approach]:** This is being listed as an open question due to it's position as a dependency on many of the stories listed in this document, but it's undefined nature as outlined in the triage record requires refinement. The I/SA also effects E-06 from the Requirements Register.
@@ -102,5 +102,7 @@ The Backlog Triage Decision Record affected the decision-making process for some
 The Product Owner Decision Record also played a role in shaping how decisions were made about the user stories, due to the "checklist" that the document provided (the section under "Transfer to DataMan" in that record).
 ## Additional Notes
 - While a specific outline of capacity was not laid out for the DataMan Project, as it stands currently the only requirements listed in the Product Backlog that could form the first usable release would be US-01 and US-05, due to their lack of dependencies, and high-value nature.
-- Items S3 and S6 from the Backlog Triage Decision Record were deferred for the purposes of this document. Item S3 was deferred because of it's low value to the project, making it difficult to include with the other features in mind. Item S6 was deferred due to outstanding disagreements between shareholders about how a reporting dashboard would look/function. This disagreement is outlined in E-03.
+- Items S3 and S6 from the Backlog Triage Decision Record were excluded for the purposes of this document. Item S3 was deferred because of it's low value to the project, making it difficult to include with the other features in mind. Item S6 was excluded due to outstanding disagreements between shareholders about how a reporting dashboard would look/function. This disagreement is outlined in E-03.
+- The functionality for repeated practice after an incorrect answer is described by item S5 in the Backlog Triage Decision Record, and by E-02 in the Requirements Register. This behavior is being covered by US-01.
+- E-06 describes an issue regarding premature logout for mobile users. This will be treated as a potential risk for US-02.
 
