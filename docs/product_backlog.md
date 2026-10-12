@@ -38,7 +38,7 @@ This backlog uses these files from my repository:
 **Dependency / Constraint:** Identity/Session approach  
 **Priority:** 2  
 **Readiness:** Refine  
-**Priority Rationale:** Since this feature unlocks development for US-02, operates on a medium risk level, and has explicit stakeholder need outlined in E-07, the feature holds a high value, but the feature can't be fully completed until this identity/session approach is resolved. US-03 maintains it's position over US-05 in the priority list due to the aforementioned stakeholder need, as well as unlocking development on US-02.
+**Priority Rationale:** High value because of explicit stakeholder need outlined in E-07, with Medium risk and Refine readiness because of the unresolved Identity/Session approach. It ranks above US-05 because of that value and because it unlocks US-02, even though US-05 can start sooner.
 
 ---
 ### US-05 — User Attempts Monitoring
@@ -89,7 +89,7 @@ This backlog uses these files from my repository:
 - **[Q-01]:** No story currently waits on this question, since it describes adding whole new features to the program, rather than describing core functionality or basic features.
 - **[Q-02]:** The behavior of the program across operating systems is technically a constraint on every story, but Q-02 does not block any of the stories from continuing development as it stands currently.  
 - **[Q-03]:** US-04 and US-02 rely on this question being answered, since the saved progress functionality, as well as the progress summary feature require collection of user data. Knowing which database technology to use would allow developers to begin working on these features.
-- **[Identity/Session Approach]:** Originating from the Backlog Triage Decision Record, this is being listed as an open question due to its position as a dependency on US-02, US-03, and US-04, but it's undefined nature as outlined in the triage record requires refinement. The Identity/Session Approach also affects E-06 and NFR-01 from the Requirements Register.
+- **[Identity/Session Approach]:** Originating from the Backlog Triage Decision Record, this is being listed as an open question due to its position as a dependency on US-02, US-03, and US-04, but its undefined nature as outlined in the triage record requires refinement. The Identity/Session Approach also affects E-06 and NFR-01 from the Requirements Register.
 ## Revisions After Triage and Release Planning
 The Backlog Triage Decision Record affected the decision-making process for some of the requirements listed above, since that record detailed a lot of functions that were laid out in the Requirements Register; a document that I used as the basis for the Product Backlog. The specific changes the Backlog Triage Decision Record made to this document are listed below:
 - US-02 deferred per triage (identity/session not ready).
@@ -111,7 +111,7 @@ The Product Owner Decision Record also played a role in shaping how decisions we
 - US-03 and US-05 have no triage counterpart.
 - While a specific outline of capacity was not laid out for the DataMan Project, as it stands currently the only requirements listed in the Product Backlog that could form the first usable release would be US-01 (no dependencies) and US-05 (depends only on US-01).
 - Items S3 and S6 from the Backlog Triage Decision Record were excluded for the purposes of this document. Item S3 was deferred because of its low value to the project, and E-01 stating that stakeholders gave no visual style for the DataMan Project. Item S6 was excluded from this backlog due to outstanding disagreements between stakeholders about how a reporting dashboard would look/function. This disagreement is outlined in E-03.
-- The functionality for repeated practice after an incorrect answer is described by item S5 in the Backlog Triage Decision Record, and by E-02 in the Requirements Register. This behavior is being covered by US-01.
+- The functionality for repeated practice after an incorrect answer is described by item S5 in the Backlog Triage Decision Record, and by E-02 in the Requirements Register. This behavior is being covered by US-01, until the behavior can be effectively split off from US-01.
 - E-06 describes an issue regarding premature logout for mobile users. This will be treated as a potential risk for US-02.
 - US-03 is set to "refine" due to the identity dependency, which according to the Backlog Triage Decision Record, is not yet complete.
 
