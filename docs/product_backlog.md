@@ -26,6 +26,7 @@ appear in this same order.
 **Priority:** 1  
 **Readiness:** Move Forward  
 **Priority Rationale:** The requirement's status as a high-value, low-effort core functionality of the system makes it a top priority. Stakeholders also require this feature for the first public release, and afford the feature very high value, as outlined in E-02.
+
 ---
 ### US-02 — Saved Progress Retention
 **Requirement ID:** [FR-01]  
@@ -40,6 +41,7 @@ appear in this same order.
 **Priority:** 4  
 **Readiness:** Defer  
 **Priority Rationale:** Implementation of this feature requires a very high amount of effort. It's high value for stakeholders and US-03's position as a dependency allows it to hold Priority 4, but the feature cannot continue development until the Identity/Session approach is resolved.
+
 ---
 ### US-03 — Mid-Practice Pause Functionality
 **Requirement ID:** [FR-02]  
@@ -54,6 +56,7 @@ appear in this same order.
 **Priority:** 2  
 **Readiness:** Refine  
 **Priority Rationale:** Since this feature unlocks development for US-02, as well as having explicit stakeholder need outlined in E-07, the feature holds a high value, but the feature can't be fully completed until this identity/session approach is resolved.
+
 ---
 ### US-04 — Parent/Teacher Progress Summary
 **Requirement ID:** [FR-04, NFR-03]  
@@ -68,6 +71,7 @@ appear in this same order.
 **Priority:** 5  
 **Readiness:** Refine  
 **Priority Rationale:** The amount of effort relative to what is being provided is unbalanced, due to it's position as being medium-value, but also medium-risk because of the feature's extra unresolved scope (i.e. usage of activity data, reliance on Q-03, and undefined reporting structure as outlined in E-03). This allows it to sit below US-02, despite being closer to completion.
+
 ---
 ### US-05 — User Attempts Monitoring
 **Requirement ID:** [FR-05]  
