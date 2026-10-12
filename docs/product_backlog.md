@@ -21,7 +21,7 @@ appear in this same order.
 - When the user enters an input into the program (i.e. problem, solution, number guess),
 - Then the system indicates whether the answer is correct or incorrect.
 
-**Relative Effort:** Small, describes a basic function of the program that would not require much substantial effort.
+**Relative Effort:** Small, describes a basic function of the program that would not require much substantial effort.  
 **Dependency / Constraint:** None  
 **Priority:** 1  
 **Readiness:** Move Forward  
