@@ -10,3 +10,6 @@ CTS-285 Systems Analysis and Design
 - M2LAB - Dataman Requirements Register
 
 ## Module Three: From Requirements to Product Work
+- M3.4 - Backlog Triage Decision Record
+- M3.5 - Product Owner Decision Record
+- M3LAB - Dataman Product Backlog
