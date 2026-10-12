@@ -64,7 +64,7 @@ appear in this same order.
 **Priority:** 4
 **Readiness:** Refine
 **Priority Rationale:** The amount of effort relative to what is being provided is relatively unbalanced, due to the number of constraints and dependencies. Stakeholder uncertainty about exactly what data to display also plays a role in this requirement's low priority rating.
----
+
 ## Open Questions Carried Forward
 List each open question or assumption from `docs/requirements.md` that affects this
 backlog. Do not turn an unresolved question into a confirmed story.
@@ -73,19 +73,4 @@ backlog. Do not turn an unresolved question into a confirmed story.
 - **[Q-03]:** US-04 relies on this question being answered, since the progress summary requires collection of user data. Knowing which database technology to use would allow developers to begin working on creating the progress summary.
 ## Revisions After Triage and Release Planning
 The Backlog Triage Decision Record greatly effected the decision-making process for some of the requirements listed above, since that record detailed a lot of functions that were laid out in the Requirements Register; a document that I used as the basis for the Product Backlog. No revisions based on the Backlog Triage Decision Record and the Product Owner Decision Record were made, since this document was created after the completion of those two records.
-## Before You Submit
-- [ ] The file path is exactly `docs/product-backlog.md`.
-- [ ] All bracketed prompts and unused story blocks are deleted.
-- [ ] Every story has all eight required fields: Story ID, Requirement ID, User
-Story, Acceptance Criteria, Relative Effort, Dependency / Constraint, Priority,
-Priority Rationale.
-- [ ] Every Requirement ID exists in `docs/requirements.md`.
-- [ ] Each acceptance criterion states a result another person can observe and
-check.
-- [ ] The story blocks follow the Priority Order list.
-- [ ] Large or uncertain stories are marked Refine or Defer, not hidden as Move
-Forward.
-- [ ] No story or criterion names a framework, database, or screen layout, unless a
-requirement makes it a constraint.
-- [ ] The file renders correctly on GitHub.
-- [ ] The change is committed with a message that describes it.
+
