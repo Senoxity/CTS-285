@@ -68,8 +68,7 @@ This backlog uses these files from my repository:
 **Dependency / Constraint:** US-03, Q-03, NFR-01, Identity/Session approach  
 **Priority:** 4  
 **Readiness:** Defer  
-**Priority Rationale:** Implementation of this feature requires a very high amount of effort. It's high value for stakeholders allows it to hold Priority 4, but the feature cannot continue development until the Identity/Session approach is resolved, and until US-03 is completed. Risk level is Medium, since the dependence on other requirements makes rework potential noticeable. It holds it's position over US-04 despite being deferred due to it's inherent value to the project, once it's dependencies have been satisfied.
-
+**Priority Rationale:** Large effort and Medium risk, with a Deferred readiness because the identity approach is unresolved and US-03 must come first. It still ranks above US-04 because its value is High (triage S2) versus Medium for US-04. Risk level is Medium, since the dependence on other requirements makes rework potential noticeable.
 ---
 ### US-04 — Parent/Teacher Progress Summary
 **Requirement ID:** [FR-04, NFR-03]  
