@@ -17,10 +17,9 @@ appear in this same order.
 **Requirement ID:** [FR-03]  
 **User Story:** As a learner, I want immediate answer feedback upon entering an input so that I know whether to continue or try again.  
 **Acceptance Criteria:**
-- Given that the user is answering a problem,
-- When the user enters an input into the program,
-- Then the system provides immediate answer feedback to the user.
-
+  - Given that the user is answering a problem,
+  - When the user enters an input into the program,
+  - Then the system provides immediate answer feedback to the user.
 **Relative Effort:** Small, describes basic core functionality of the system.
 **Dependency / Constraint:** None  
 **Priority:** 1  
