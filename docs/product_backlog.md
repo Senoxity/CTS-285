@@ -83,7 +83,7 @@ This backlog uses these files from my repository:
 **Dependency / Constraint:** Q-03, E-03, Identity/Session approach, Activity data.  
 **Priority:** 5  
 **Readiness:** Refine  
-**Priority Rationale:** The story's position is medium-value, but also medium-risk because of the feature's extra unresolved scope (i.e. usage of activity data, reliance on Q-03, and undefined reporting structure as outlined in E-03). This allows it to sit below US-02, despite being closer to completion.
+**Priority Rationale:** Medium value, Medium effort, Medium risk, plus extra unresolved scope: activity data, Q-03, and undefined reporting (E-03). Refinement is required if US-04 is to move forward.
 
 ## Open Questions Carried Forward
 - **[Q-01]:** No story currently waits on this question, since it describes adding whole new features to the program, rather than describing core functionality or basic features.
