@@ -20,7 +20,7 @@ appear in this same order.
   - Given that the user is answering a problem,
   - When the user enters an input into the program,
   - Then the system provides immediate answer feedback to the user.
-  **Relative Effort:** Small, describes basic core functionality of the system.
+**Relative Effort:** Small, describes basic core functionality of the system.
 **Dependency / Constraint:** None  
 **Priority:** 1  
 **Readiness:** Move Forward  
