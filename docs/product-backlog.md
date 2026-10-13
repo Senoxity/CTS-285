@@ -38,7 +38,7 @@ This backlog uses these files from my repository:
 **Dependency / Constraint:** Identity/Session approach  
 **Priority:** 2  
 **Readiness:** Refine  
-**Priority Rationale:** High value because of explicit stakeholder need outlined in E-07, with Medium risk and Refine readiness because of the unresolved Identity/Session approach. It ranks above US-05 because of that value and because it unlocks US-02, even though US-05 can start sooner.
+**Priority Rationale:** High value because of explicit stakeholder need outlined in E-07, with Medium risk and Refine readiness because of the unresolved Identity/Session approach. It ranks above US-05 because of that value and because it unlocks US-02, even though US-05 can start sooner. However, in the event of low capacity, US-05 should be prioritized, since it can be pushed out to users sooner, which can then open up more capacity to work on US-03.
 
 ---
 ### US-05 — User Attempts Monitoring
