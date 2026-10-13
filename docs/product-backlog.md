@@ -5,14 +5,14 @@ This backlog uses these files from my repository:
 - `docs/decisions/m3-backlog-triage-record.md`
 - `docs/decisions/m3-product-owner-decision-record.md`
 ## Priority Order
-1. [US-01]
-2. [US-03]
-3. [US-05]
-4. [US-02]
-5. [US-04]
+1. US-01
+2. US-03
+3. US-05
+4. US-02
+5. US-04
 ## Stories
 ### US-01 — Immediate User Feedback
-**Requirement ID:** [FR-03]  
+**Requirement ID:** FR-03  
 **User Story:** As a learner, I want immediate answer feedback upon entering an input so that I know whether to continue or try again.  
 **Acceptance Criteria:**
 - Given that the user is answering a problem,
@@ -27,7 +27,7 @@ This backlog uses these files from my repository:
 
 ---
 ### US-03 — Mid-Practice Pause Functionality
-**Requirement ID:** [FR-02]  
+**Requirement ID:** FR-02  
 **User Story:** As a learner, I want to be able to pause mid-practice session so that I can stop partway through and later continue from exactly where I left off.  
 **Acceptance Criteria:**  
 - Given that a user's practice session is currently in-progress,
@@ -42,7 +42,7 @@ This backlog uses these files from my repository:
 
 ---
 ### US-05 — User Attempts Monitoring
-**Requirement ID:** [FR-05]  
+**Requirement ID:** FR-05  
 **User Story:** As a learner, I want the ability to see how many attempts I’ve used and how many remain so that I stay focused on each problem instead of guessing or giving up.  
 **Acceptance Criteria:**  
 - Given that a learner is in a practice session,
@@ -57,7 +57,7 @@ This backlog uses these files from my repository:
 
 ---
 ### US-02 — Saved Progress Retention
-**Requirement ID:** [FR-01]  
+**Requirement ID:** FR-01  
 **User Story:** As a learner, I want my progress to be saved between sessions so that I don’t lose my practice progress when I leave and come back later.  
 **Acceptance Criteria:**  
 - Given that the user has exited an authenticated session,
@@ -72,7 +72,7 @@ This backlog uses these files from my repository:
 
 ---
 ### US-04 — Parent/Teacher Progress Summary
-**Requirement ID:** [FR-04, NFR-03]  
+**Requirement ID:** FR-04, NFR-03  
 **User Story:** As a parent or teacher, I want a summary of the learner's progress so that I can see what they practiced, and whether progress is occurring.  
 **Acceptance Criteria:**  
 - Given that a learner has completed a practice session,
@@ -86,10 +86,10 @@ This backlog uses these files from my repository:
 **Priority Rationale:** Medium value, Medium effort, Medium risk, plus extra unresolved scope: activity data, Q-03, and undefined reporting (E-03). Refinement is required if US-04 is to move forward.
 
 ## Open Questions Carried Forward
-- **[Q-01]:** No story currently waits on this question, since it describes adding whole new features to the program, rather than describing core functionality or basic features.
-- **[Q-02]:** The behavior of the program across operating systems is technically a constraint on every story, but Q-02 does not block any of the stories from continuing development as it stands currently.  
-- **[Q-03]:** US-04 and US-02 rely on this question being answered, since the saved progress functionality, as well as the progress summary feature require collection of user data. Knowing which database technology to use would allow developers to begin working on these features.
-- **[Identity/Session Approach]:** Originating from the Backlog Triage Decision Record, this is being listed as an open question due to its position as a dependency on US-02, US-03, and US-04, but its undefined nature as outlined in the triage record requires refinement. The Identity/Session Approach also affects E-06 and NFR-01 from the Requirements Register.
+- **Q-01:** No story currently waits on this question, since it describes adding whole new features to the program, rather than describing core functionality or basic features.
+- **Q-02:** The behavior of the program across operating systems is technically a constraint on every story, but Q-02 does not block any of the stories from continuing development as it stands currently.  
+- **Q-03:** US-04 and US-02 rely on this question being answered, since the saved progress functionality, as well as the progress summary feature require collection of user data. Knowing which database technology to use would allow developers to begin working on these features.
+- **Identity/Session Approach:** Originating from the Backlog Triage Decision Record, this is being listed as an open question due to its position as a dependency on US-02, US-03, and US-04, but its undefined nature as outlined in the triage record requires refinement. The Identity/Session Approach also affects E-06 and NFR-01 from the Requirements Register.
 ## Revisions After Triage and Release Planning
 The Backlog Triage Decision Record affected the decision-making process for some of the requirements listed above, since that record detailed a lot of functions that were laid out in the Requirements Register; a document that I used as the basis for the Product Backlog. The specific changes the Backlog Triage Decision Record made to this document are listed below:
 - US-02 deferred per triage (identity/session not ready).
