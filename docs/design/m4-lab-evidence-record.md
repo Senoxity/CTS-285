@@ -33,7 +33,7 @@ N/A
 ---
 
 ## Cross-Lab Finding
-Both of the tests described above would not have been able to be discovered without actually testing the program, and instead simply reading the requirements for the program, since both describe the direct behavior of the program--one instance of it working properly, and one where some ironing out needs to be done.
+Both of the tests described above would not have been able to be discovered without actually testing the program, and instead simply reading the requirements for the program, since both describe the direct behavior of the program--one instance of it working properly, and one where refinement is necessary.
 
 ## Revised / New Design Question
 With the answer flow and memory bank features ironed out, the next main question that requires answering regards the pause functionality that I described in my product backlog. Particularly, how exactly the program state will be saved and restored is extremely important to implementing the feature in the final design.
