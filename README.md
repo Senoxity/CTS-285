@@ -13,3 +13,9 @@ CTS-285 Systems Analysis and Design
 - M3.4 - Backlog Triage Decision Record
 - M3.5 - Product Owner Decision Record
 - M3LAB - Dataman Product Backlog
+
+## Module Four: From Product Work to Build-Ready Design
+- M4 Design Investigation Record
+- M4 Investigation Brief
+- M4.2 Lab Decision Record
+- M4LAB Text Prototype
