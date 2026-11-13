@@ -1,0 +1,2 @@
+ALWAYS open the program from the folder that contains app.py.
+If you don't, then the .json file won't store properly, which will break the pause system.

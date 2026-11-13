@@ -45,6 +45,7 @@ def practice(store):
     session = PracticeSession(store, SESSION, PROBLEM)
     if session.is_finished():
         print("This session is finished. Choose 'report'.")
+        print("If you are seeing this after opening the program for the first time, delete dataman_store.json in the files.")
         return
     print("Type 'pause' at any time to pause.")
     run_problem(session)
@@ -81,7 +82,7 @@ def bank(store):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--store", choices=["memory", "json"], default="memory")
+    parser.add_argument("--store", choices=["memory", "json"], default="json")
     args = parser.parse_args()
     store = JsonFileStore() if args.store == "json" else MemoryStore()
     actions = {"practice": practice, "unpause": unpause, "report": report, "bank": bank}
@@ -91,6 +92,10 @@ def main():
         except (KeyboardInterrupt, EOFError):
             print()
             break
+        if choice == "quit":
+            break
+        if choice in actions:
+            actions[choice](store)
 
 
 if __name__ == "__main__":
