@@ -6,20 +6,25 @@ Run:  python app.py              (data lives in RAM)
 import argparse
 
 from dataman.logic import (MemoryBank, PracticeSession, Problem, SetFull,
-                           curator_report)
+                           curator_report, paused_state)
 from dataman.store import JsonFileStore, MemoryStore
 
 PROBLEM = Problem("P1", "7 x 8", 56)
+PROBLEMS = {PROBLEM.id: PROBLEM}   # stub: turns a saved problem id back into a Problem
 SESSION = "maya-1"
 
-
-def practice(store):
-    session = PracticeSession(store, SESSION, PROBLEM)
-    if session.is_finished():
-        print("This session is finished. Choose 'report'.")
-        return
+def run_problem(session):
+    """Ask for answers until the problem is finished or the learner pauses."""
     while not session.is_finished():
-        raw = input(f"Try {session.next_try()}: {PROBLEM.prompt} = ")
+        try:
+            raw = input(f"Try {session.next_try()}: {session.problem.prompt} = ")
+        except (KeyboardInterrupt, EOFError):
+            raw = "pause"
+        raw = raw.strip().lower()
+        if raw == "pause":
+            session.pause()
+            print("\nPaused. Choose 'unpause' to continue.")
+            return
         try:
             answer = int(raw)
         except ValueError:
@@ -32,6 +37,28 @@ def practice(store):
             print("Not yet. Try again.")
         else:
             print(f"The answer is {out.revealed_answer}.")
+
+def practice(store):
+    if paused_state(store, SESSION) is not None:
+        print("A session is paused. Choose 'unpause' to continue.")
+        return
+    session = PracticeSession(store, SESSION, PROBLEM)
+    if session.is_finished():
+        print("This session is finished. Choose 'report'.")
+        return
+    print("Type 'pause' at any time to pause.")
+    run_problem(session)
+
+
+def unpause(store):
+    state = paused_state(store, SESSION)
+    if state is None:
+        print("Nothing is paused.")
+        return
+    session = PracticeSession(store, SESSION, PROBLEMS[state.problem_id])
+    session.resume()
+    print(f"Resuming {state.problem_id} at try {state.try_number}.")
+    run_problem(session)
 
 
 def report(store):
@@ -57,13 +84,13 @@ def main():
     parser.add_argument("--store", choices=["memory", "json"], default="memory")
     args = parser.parse_args()
     store = JsonFileStore() if args.store == "json" else MemoryStore()
-    actions = {"practice": practice, "report": report, "bank": bank}
+    actions = {"practice": practice, "unpause": unpause, "report": report, "bank": bank}
     while True:
-        choice = input("practice / report / bank / quit > ").strip().lower()
-        if choice == "quit":
+        try:
+            choice = input("practice / unpause / report / bank / quit > ").strip().lower()
+        except (KeyboardInterrupt, EOFError):
+            print()
             break
-        if choice in actions:
-            actions[choice](store)
 
 
 if __name__ == "__main__":

@@ -23,6 +23,11 @@ class Outcome:
     try_number: int             # the try that was just used
     revealed_answer: int | None  # set only when status == "reveal"
 
+@dataclass(frozen=True)
+class PausedState:
+    """What the interface needs in order to resume a paused problem."""
+    problem_id: str
+    try_number: int
 
 class SetFull(Exception):
     """Raised when a Memory Bank set already holds MAX_SET_SIZE problems."""
@@ -31,6 +36,8 @@ class SetFull(Exception):
 class AttemptsExhausted(Exception):
     """Raised when a session is already finished and gets another answer."""
 
+class NothingToPause(Exception):
+    """Raised when a session is already finished and gets a pause request."""
 
 class PracticeSession:
     """One learner, one problem. State comes from the store, not from memory."""
@@ -64,6 +71,20 @@ class PracticeSession:
             return Outcome("reveal", try_number, self.problem.answer)
         return Outcome("retry", try_number, None)
 
+    def pause(self) -> None:
+        if self.is_finished():
+            raise NothingToPause(self.problem.id)
+        self.store.save_pause(self.session_id, self.problem.id, self.next_try())
+
+    def resume(self) -> None:
+        self.store.clear_pause(self.session_id)
+
+def paused_state(store, session_id: str) -> PausedState | None:
+    """returns what is needed to resume, or None"""
+    record = store.load_pause(session_id)
+    if record is None:
+        return None
+    return PausedState(record["problem_id"], record["try"])
 
 def result_label(attempts: list[dict]) -> str:
     """Curator view: tell the three outcomes apart."""
