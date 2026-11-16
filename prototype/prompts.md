@@ -8,3 +8,6 @@ List of AI prompts used in this project, dated.
 * I would much prefer if you told me how to implement the feature on my own, rather than have you do all the work.
 * The state must be stored in a .JSON file, similar to how the Memory Bank is stored.
 
+[11/13/26 1:22PM] I'm trying to run the program to test it but entering practice at the menu just resets back to the menu instead of opening a problem
+
+[11/16/26 12:19PM] Now we can move on to making the new pytest files. Create two pytest files that test the basic functionality of the answer checker and memory bank features respectively, and print their output/results into the Terminal. I'm choosing to keep try_pause.py from earlier, so for now you don't need to make that.

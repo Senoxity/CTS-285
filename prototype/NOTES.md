@@ -26,5 +26,7 @@ Design decision: Rule lives in the logic layer, and the saved state lives in the
 [11/13/26 12:35PM] Added try_pause.py for testing the new pause methods, courtesy of Claude (included in initial prompt).
 [11/13/26 12:51PM] New functions added to app.py to allow the user to enter "pause" to invoke paused state, and "unpause' to restore.
 [11/13/26 12:54PM] Safeguard added so that ending the input counts as a pause.
+[11/16/26 12:36PM] Claude added new pytests to check the basic functionality of Answer Checker and Memory Bank. Also checks for data retention.
+[11/16/26 12:39PM] Project README begins work for final commit.
 
 

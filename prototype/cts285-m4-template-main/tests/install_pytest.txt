@@ -1,0 +1,4 @@
+Before running any tests, run the following command to install Pytest if you haven't already.
+Make sure the terminal is pointed at the folder that contains requirements.txt.
+
+python -m pip install -r requirements.txt
