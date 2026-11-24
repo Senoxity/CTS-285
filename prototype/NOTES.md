@@ -28,5 +28,8 @@ Design decision: Rule lives in the logic layer, and the saved state lives in the
 [11/13/26 12:54PM] Safeguard added so that ending the input counts as a pause.
 [11/16/26 12:36PM] Claude added new pytests to check the basic functionality of Answer Checker and Memory Bank. Also checks for data retention.
 [11/16/26 12:39PM] Project README begins work for final commit.
+[11/25/26 1:54PM] Begin development on flask minimal prototype.
+[11/25/26 1:55PM] app.py renamed to menu.py. app.py now corresponds to flask functionality.
+
 
 
