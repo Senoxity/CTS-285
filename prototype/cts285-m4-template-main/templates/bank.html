@@ -3,7 +3,9 @@
 <head><meta charset="utf-8"><title>Memory Bank</title></head>
 <body>
   <h1>Memory Bank: set-1</h1>
-  {% if message %}<p><strong>{{ message }}</strong></p>{% endif %}
+  {% for message in get_flashed_messages() %}
+    <p><strong>{{ message }}</strong></p>
+  {% endfor %}
   <p>Set holds {{ members|length }}: {{ members|join(", ") }}</p>
   <form method="post">
     <label for="problem_id">Problem id to add (for example P11)</label>

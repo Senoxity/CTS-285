@@ -3,7 +3,9 @@
 <head><meta charset="utf-8"><title>Practice</title></head>
 <body>
   <h1>Practice</h1>
-  {% if message %}<p><strong>{{ message }}</strong></p>{% endif %}
+  {% for message in get_flashed_messages() %}
+    <p><strong>{{ message }}</strong></p>
+  {% endfor %}
   {% if finished %}
     <p>This session is finished.</p>
   {% else %}
