@@ -25,7 +25,7 @@ def check_answer(state, submitted):
 
     next_state["status"] = "retry"
     return {
-        "message": "Try again.",
+        "message": "Not quite, try again.",
         "allow_retry": True,
         "reveal_answer": False,
         "state": next_state,
