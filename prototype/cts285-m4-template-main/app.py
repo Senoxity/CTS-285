@@ -19,7 +19,7 @@ SESSION = "maya-1"
 
 @app.route("/")
 def home():
-    return "DataMan is running on the web."
+    return render_template("home.html")
 
 
 @app.route("/practice", methods=["GET", "POST"])
