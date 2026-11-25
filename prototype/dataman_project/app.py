@@ -7,8 +7,7 @@ Run:  python -m flask --app app run --debug --host=0.0.0.0
 """
 from flask import Flask, flash, redirect, render_template, request, url_for
 
-from dataman.logic import (MemoryBank, PracticeSession, Problem, SetFull,
-                           curator_report)
+from dataman.logic import (MemoryBank, NothingToPause, PracticeSession, Problem, SetFull, curator_report, paused_state)
 from dataman.store import JsonFileStore
 
 app = Flask(__name__)
@@ -16,6 +15,7 @@ app.secret_key = "dev-only-change-me"   # signs flash messages; not a real secre
 
 STORE = JsonFileStore()     # one store for the whole program, made once
 PROBLEM = Problem("P1", "7 x 8", 56)
+PROBLEMS = {PROBLEM.id: PROBLEM}   # stub: turns a saved problem id back into a Problem
 SESSION = "maya-1"
 
 
@@ -27,7 +27,11 @@ def home():
 @app.route("/practice", methods=["GET", "POST"])
 def practice():
     session = PracticeSession(STORE, SESSION, PROBLEM)
+    paused = paused_state(STORE, SESSION)
     if request.method == "POST":
+        if paused is not None:
+            flash("This session is paused. Choose resume.")
+            return redirect(url_for("practice"))
         raw = request.form.get("answer", "")
         try:
             answer = int(raw)
@@ -48,7 +52,30 @@ def practice():
         return redirect(url_for("practice"))
     return render_template("practice.html", problem=PROBLEM,
                            try_number=session.next_try(),
-                           finished=session.is_finished())
+                           finished=session.is_finished(),
+                           paused=paused)
+
+
+@app.route("/pause", methods=["POST"])
+def pause():
+    session = PracticeSession(STORE, SESSION, PROBLEM)
+    try:
+        session.pause()
+        flash("Paused.")
+    except NothingToPause:
+        flash("Nothing to pause. This session is finished.")
+    return redirect(url_for("practice"))
+
+
+@app.route("/unpause", methods=["POST"])
+def unpause():
+    state = paused_state(STORE, SESSION)
+    if state is None:
+        flash("Nothing is paused.")
+    else:
+        PracticeSession(STORE, SESSION, PROBLEMS[state.problem_id]).resume()
+        flash(f"Resuming {state.problem_id} at try {state.try_number}.")
+    return redirect(url_for("practice"))
 
 
 @app.route("/report")

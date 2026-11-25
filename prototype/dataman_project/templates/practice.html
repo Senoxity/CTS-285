@@ -6,15 +6,33 @@
   {% for message in get_flashed_messages() %}
     <p><strong>{{ message }}</strong></p>
   {% endfor %}
-  {% if finished %}
+
+  {% if paused %}
+    {# State 1: paused. The problem is hidden until the learner resumes. #}
+    <p>Paused at try {{ paused.try_number }} of {{ paused.problem_id }}.</p>
+    <form method="post" action="{{ url_for('unpause') }}">
+      <button type="submit">Resume</button>
+    </form>
+
+  {% elif finished %}
+    {# State 2: finished. Nothing left to answer or pause. #}
     <p>This session is finished.</p>
+    <p><a href="{{ url_for('report') }}">See the report</a></p>
+
   {% else %}
+    {# State 3: in progress. Answer the problem, or pause it. #}
     <form method="post">
       <label for="answer">Try {{ try_number }}: {{ problem.prompt }} =</label>
       <input id="answer" name="answer" required>
       <button type="submit">Check</button>
     </form>
+    {# Separate form on purpose: the answer box above is "required", so a Pause
+       button inside that form would be blocked whenever the box is empty. #}
+    <form method="post" action="{{ url_for('pause') }}">
+      <button type="submit">Pause</button>
+    </form>
   {% endif %}
+
   <p><a href="{{ url_for('home') }}">Back to menu</a></p>
 </body>
 </html>

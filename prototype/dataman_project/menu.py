@@ -1,5 +1,5 @@
-"""Run:  python app.py              (data lives in RAM)
-      python app.py --store json (data survives a restart)
+"""Run:  python menu.py              (data lives in RAM)
+      python menu.py --store json (data survives a restart)
 """
 import argparse
 
