@@ -31,6 +31,7 @@ Design decision: Rule lives in the logic layer, and the saved state lives in the
 [11/25/26 1:54PM] Begin development on flask minimal prototype.
 [11/25/26 1:55PM] app.py renamed to menu.py. app.py now corresponds to flask functionality.
 [11/25/26 3:35PM] Flask functionality completed.
+[11/2726 12:54PM] Pause functionality re-added to the Flask prototype.
 
 
 
